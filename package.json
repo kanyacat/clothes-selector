@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "SET NODE_ENV='production' && webpack",
+    "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
