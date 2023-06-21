@@ -3,5 +3,4 @@ function App() {
     <div>hallo meow~</div>
   );
 }
-
 export default App;
