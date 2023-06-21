@@ -1,13 +1,35 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const GLOBAL_CSS_REGEXP = /\.global\.css$/;
+
+
 module.exports = {
     entry: './src/index.js',
     module: {
         rules: [
             { test: /\.svg$/, use: 'svg-inline-loader' },
-            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
-            { test: /\.(js)$/, use: 'babel-loader' }
+            {
+                test: /\.css$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                mode: "local",
+                                localIdentName: "[name]__[local]--[hash:base64:5]",
+                            },
+                        },
+                    },
+                ],
+                exclude: GLOBAL_CSS_REGEXP,
+            },
+            {
+                test: GLOBAL_CSS_REGEXP,
+                use: ["style-loader", "css-loader"],
+            },,
+            { test:  /\.js$|jsx/, use: 'babel-loader' }
         ]
     },
     output: {
