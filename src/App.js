@@ -1,10 +1,10 @@
-import { MegaMeow } from "./components/MegaMeow/MegaMeow.jsx";
+import "./main.global.css";
+import {Content} from "./components/Content";
 
 function App() {
   return (
       <>
-        <div>hallo meow~</div>
-      <MegaMeow />
+      <Content />
       </>
   );
 }

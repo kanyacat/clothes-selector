@@ -1,0 +1,51 @@
+.headerLink {
+    position: relative;
+    padding: 12px 0;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FEFEFE;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 1.28px;
+}
+
+.headerLink:after {
+    position: absolute;
+
+    display: none;
+
+    content: '';
+    bottom: 8px;
+    left: 0;
+    background-color: #FEFEFE;
+    height: 1px;
+    width: 100%;
+}
+
+.headerLink:hover:after,
+.headerLink:focus:after,
+.headerLink:active:after
+{
+    display: block
+}
+
+.icon {
+    margin-left: 6px;
+}
+
+@media (max-width: 1024px) {
+    .headerLink {
+        font-size: 14px;
+        letter-spacing: 1.18px;
+    }
+}
+
+@media (max-width: 760px) {
+    .headerLink {
+        font-size: 13px;
+        letter-spacing: 1.10px;
+    }
+}
