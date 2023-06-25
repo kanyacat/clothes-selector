@@ -2,8 +2,6 @@ import styles from './header.css';
 import {HeaderComponent} from "./HeaderComponent";
 import {LoginArrow} from "../../../icons";
 import {Link, Route, Routes} from "react-router-dom";
-import Home from "../../../Home";
-import Contact from "../../../Contact";
 import {Clothes} from "../Clothes";
 import {AddClothes} from "../AddClothes";
 import {SelectClothes} from "../SelectClothes";

@@ -1,10 +1,11 @@
 import "./main.global.css";
-import {Title} from "./components/Content";
+import {Content, Title} from "./components/Content/Title";
+import {Header} from "./components/Content/Header";
 
 function App() {
     return (
       <>
-      <Title />
+      <Header />
       </>
   );
 }

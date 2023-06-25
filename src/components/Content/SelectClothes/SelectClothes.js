@@ -1,3 +1,8 @@
+import {Title} from "../Title/Title";
+
 export function SelectClothes() {
-    return <div>подбор одежды</div>
+         return <>
+        <Title value={'подбор одежды'}/>
+    </>
+
 }

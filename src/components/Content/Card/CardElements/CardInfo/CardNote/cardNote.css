@@ -1,0 +1,19 @@
+.textarea {
+    height: 70px;
+    width: 450px;
+
+    resize: none;
+
+    padding: 2px 8px;
+}
+
+.textarea:disabled {
+    background-color: #FEFEFE;
+    color: #A6A6A6;
+}
+
+@media (max-width: 1024px) {
+    .textarea {
+        width: 100%;
+    }
+}

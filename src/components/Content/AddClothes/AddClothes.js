@@ -1,3 +1,8 @@
+import {Title} from "../Title/Title";
+
 export function AddClothes() {
-    return <div>добавление одежды</div>
+         return <>
+        <Title value={'добавление вещи в гардероб'}/>
+    </>
+
 }
