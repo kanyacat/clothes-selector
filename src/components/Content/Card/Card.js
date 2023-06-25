@@ -1,8 +1,5 @@
 import styles from './card.css';
 import {CardInfo} from "./CardElements/CardInfo";
-import {NoImg} from "../../../icons";
-import {CardValue} from "./CardElements/CardInfo/CardValue";
-import {CardNote} from "./CardElements/CardInfo/CardNote";
 
 export function Card() {
     const cards = [
@@ -12,7 +9,8 @@ export function Card() {
             color: 'Розовый',
             weather: '15C',
             category: 'На выход',
-            note: 'Просто потому что я люблю кошечек'
+            note: 'Просто потому что я люблю кошечек',
+            img: 'https://vk.com/sticker/1-71361-128b'
         },
         {
             name: 'Собачки',
@@ -20,7 +18,8 @@ export function Card() {
             color: 'Кремовый',
             weather: '15C',
             category: 'На выход',
-            note: 'Просто потому что я люблю собачек'
+            note: 'Просто потому что я люблю собачек',
+            img: 'https://vk.com/sticker/1-68950-128b'
         },
         {
             name: 'Крысятки',
@@ -33,8 +32,15 @@ export function Card() {
     ]
 
     return <ul>{cards != null ? cards.map((card, index) => {
-
-        return (<div className={styles.container}> <CardInfo name={card.name} style={card.style} color={card.color} weather={card.weather} category={card.category} note={card.note} /></div>)
+        return (<div className={styles.container}> <CardInfo
+            name={card.name}
+            style={card.style}
+            color={card.color}
+            weather={card.weather}
+            category={card.category}
+            note={card.note}
+            img={card.img}/>
+        </div>)
     }): ''}</ul>
 
 }
