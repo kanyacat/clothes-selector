@@ -1,0 +1,9 @@
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.addBtn {
+    margin-left: 10px;
+    margin-top: 5px;
+}

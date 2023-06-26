@@ -1,9 +1,11 @@
+import styles from './clothes.css'
 import {Title} from "../Title/Title";
 import {Card} from "../Card";
+import {AddClothesButton} from "./AddClothesButton";
 
 export function Clothes() {
     return <>
-    <Title value={'моя одежда'}/> наверху должен быть плюсик рядом
+    <div className={styles.title}><Title value={'моя одежда'}/> <span className={styles.addBtn}><AddClothesButton /></span></div>
         <Card />
     </>
 }

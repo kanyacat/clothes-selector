@@ -1,6 +1,7 @@
 import styles from './card.css';
 import {CardInfo} from "./CardElements/CardInfo";
 import {DeleteButton} from "./CardElements/DeleteButton";
+import { nanoid } from "nanoid/non-secure";
 
 export function Card() {
     const cards = [
@@ -30,10 +31,13 @@ export function Card() {
             category: 'Дома',
             note: 'Просто потому что я люблю крысок'
         },
-    ]
+    ].map((item) => ({
+        ...item,
+        id: nanoid(),
+    }));
 
     return <ul>{cards != null ? cards.map((card, index) => {
-        return (<div className={styles.container}>
+        return (<li key={card.id} className={styles.container}>
             <button className={styles.deleteBtn}><DeleteButton /></button>
             <CardInfo
             name={card.name}
@@ -42,8 +46,9 @@ export function Card() {
             weather={card.weather}
             category={card.category}
             note={card.note}
-            img={card.img}/>
-        </div>)
+            img={card.img}
+            />
+        </li>)
     }): ''}</ul>
 
 }

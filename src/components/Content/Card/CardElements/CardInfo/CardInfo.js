@@ -13,7 +13,7 @@ export function CardInfo(props) {
             <CardValue title={'цветовая гамма'} value={color}/>
             <CardValue title={'погода'} value={weather}/>
             <CardValue title={'категория'} value={category}/>
-            <span className={styles.note}><CardNote value={note}/></span>
+            <CardNote value={note}/>
             <span className={styles.editBtn}><EditButton /></span>
         </div>
     </div>)
