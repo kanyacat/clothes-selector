@@ -1,5 +1,6 @@
 import styles from './card.css';
 import {CardInfo} from "./CardElements/CardInfo";
+import {DeleteButton} from "./CardElements/DeleteButton";
 
 export function Card() {
     const cards = [
@@ -32,7 +33,9 @@ export function Card() {
     ]
 
     return <ul>{cards != null ? cards.map((card, index) => {
-        return (<div className={styles.container}> <CardInfo
+        return (<div className={styles.container}>
+            <button className={styles.deleteBtn}><DeleteButton /></button>
+            <CardInfo
             name={card.name}
             style={card.style}
             color={card.color}

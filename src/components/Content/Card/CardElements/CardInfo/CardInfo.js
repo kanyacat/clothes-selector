@@ -1,6 +1,7 @@
 import styles from './cardInfo.css';
 import {CardValue} from "./CardValue";
 import {CardNote} from "./CardNote";
+import {EditButton} from "../EditButton";
 
 export function CardInfo(props) {
     const {name, style, color, weather, category, note, img = 'https://svgshare.com/i/ucc.svg'} = props;
@@ -12,7 +13,8 @@ export function CardInfo(props) {
             <CardValue title={'цветовая гамма'} value={color}/>
             <CardValue title={'погода'} value={weather}/>
             <CardValue title={'категория'} value={category}/>
-            <CardNote value={note}/>
+            <span className={styles.note}><CardNote value={note}/></span>
+            <span className={styles.editBtn}><EditButton /></span>
         </div>
     </div>)
 
