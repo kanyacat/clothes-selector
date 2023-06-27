@@ -1,15 +1,16 @@
 import {Title} from "../Title/Title";
 import styles from './addClothes.css'
-import {Select} from "./CardAdd/Select/Select";
-import {CardAdd} from "./CardAdd";
-import {CardImg} from "./CardAdd/CardImg";
+import {Select} from "./Select/Select";
+import {CardImg} from "./CardImg";
 import {CardNote} from "../Card/CardElements/CardInfo/CardNote";
+import {Card} from "../Card";
 
 export function AddClothes() {
 
     return <>
         <Title value={'добавление вещи в гардероб'}/>
-        <CardAdd>
+        <ul>
+            <Card>
             <div className={styles.container}>
                 <button className={styles.img}><CardImg /></button>
                 <div className={styles.inf}>
@@ -18,6 +19,8 @@ export function AddClothes() {
                     <CardNote />
                 </div>
             </div>
-        </CardAdd>
+        </Card>
+        </ul>
+
     </>
 }
