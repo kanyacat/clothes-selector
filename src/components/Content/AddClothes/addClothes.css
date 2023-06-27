@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+.textarea *  {
+    height: 28px;
+    width: 450px;
+
+    resize: none;
+
+    padding: 5px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
