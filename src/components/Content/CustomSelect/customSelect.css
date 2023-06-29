@@ -1,0 +1,15 @@
+.content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.inputError {
+    border-color: #fc8181;
+}
+
+.error {
+    font-size: 20px;
+    color: #fc8181;
+    margin-bottom: 4px;
+}
