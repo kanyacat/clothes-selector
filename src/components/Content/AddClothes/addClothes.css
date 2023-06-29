@@ -4,7 +4,6 @@
 }
 
 .img {
-    width: 30%;
     text-align: center;
     padding: 20px;
 }
@@ -28,3 +27,14 @@
     letter-spacing: 4px;
     text-transform: uppercase;
 }
+
+.btn {
+    padding: 10px;
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+.btn:disabled {
+    opacity: 0.35;
+}
+
