@@ -1,1 +1,30 @@
+.content {
+    width: 90%;
+}
 
+.btn {
+    padding: 10px 25px;
+
+    font-size: 20px;
+    font-family: Roboto, serif;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+
+    color: #ffff;
+    background-color: #CABCB1;
+    border-radius: 10px;
+}
+
+.btn:disabled {
+    opacity: 0.65;
+}
+
+.selectTitle {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 10.08px;
+    text-transform: uppercase;
+
+
+}

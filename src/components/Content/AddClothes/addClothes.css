@@ -32,6 +32,7 @@ select {
     padding: 6px 8px;
 
     font-size: 16px;
+    letter-spacing: 2px;
     border: 1px solid #CABCB1;
     background-color: #F5F2E1;
     border-radius: 5px;

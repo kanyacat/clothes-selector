@@ -55,3 +55,19 @@ export const cardSchema = yup.object().shape({
     note: yup
         .string()
 });
+
+export const selectSchema = yup.object().shape({
+    style: yup
+        .string()
+        .oneOf(["sobesedovanye", "delovay_Vstrecha", "progulka", "svidanie"],
+            "Выберите один из вариантов")
+        .required("Обязательно"),
+    color: yup
+        .string()
+        .oneOf(["dark", "light"], "Выберите один из вариантов")
+        .required("Обязательно"),
+    weather: yup
+        .number()
+        .integer()
+        .required("Обязательно"),
+});

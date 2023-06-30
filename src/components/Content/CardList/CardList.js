@@ -39,7 +39,7 @@ export function CardList() {
 
     return <ul>{cards != null ? cards.map((card, index) => {
         return (<Card key={card.id}>
-            <button className={styles.deleteBtn}><DeleteButton /></button>
+            <button className={styles.deleteBtn}><DeleteButton width={'38'} height={'38'} /></button>
             <CardInfo
             name={card.name}
             style={card.style}

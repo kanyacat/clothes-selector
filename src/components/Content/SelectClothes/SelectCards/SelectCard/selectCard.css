@@ -1,0 +1,57 @@
+.container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #E7E0D0;
+    padding: 35px 18px;
+    margin: 5px;
+
+    width: 300px;
+    height: auto;
+}
+
+.img {
+    min-width: 30%;
+    height: auto;
+    text-align: center;
+}
+
+.name, .style {
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.name {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.style {
+    margin-top: 0;
+}
+
+.note {
+    resize: none;
+
+    width: 80%;
+    min-height: 80px;
+    height: auto;
+
+    padding: 2px 8px;
+}
+
+.deleteBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    z-index: 1;
+}

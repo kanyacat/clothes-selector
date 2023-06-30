@@ -3,7 +3,7 @@ import styles from './addClothes.css'
 import {CardImg} from "./CardImg";
 import {Card} from "../Card";
 import {Form, Formik} from "formik";
-import {cardSchema} from "../SelectClothes/schemas";
+import {cardSchema} from "../../schemas";
 import {CustomInput} from "../CustomInput";
 import {CustomSelect} from "../CustomSelect";
 
