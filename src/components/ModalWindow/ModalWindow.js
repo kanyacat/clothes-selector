@@ -1,7 +1,7 @@
 import styles from './modalWindow.css';
 import React from "react";
 
-const Modal = ({
+export const Modal = ({
                    visible = false,
                    title = '',
                    content = '',
