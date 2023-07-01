@@ -3,43 +3,53 @@ import {CardInfo} from "../Card/CardElements/CardInfo";
 import {DeleteButton} from "../Card/CardElements/DeleteButton";
 import { nanoid } from "nanoid/non-secure";
 import {Card} from "../Card";
+import {useState} from 'react';
+
+
+const cards = [
+    {
+        name: 'Кошечки',
+        style: 'Кошачий',
+        color: 'Розовый',
+        weather: '15C',
+        category: 'На выход',
+        note: 'Просто потому что я люблю кошечек',
+        img: 'https://vk.com/sticker/1-71361-128b'
+    },
+    {
+        name: 'Собачки',
+        style: 'Собачий',
+        color: 'Кремовый',
+        weather: '15C',
+        category: 'На выход',
+        note: 'Просто потому что я люблю собачек',
+        img: 'https://vk.com/sticker/1-68950-128b'
+    },
+    {
+        name: 'Крысятки',
+        style: 'Крысиный',
+        color: 'Белый',
+        weather: '20C',
+        category: 'Дома',
+        note: 'Просто потому что я люблю крысок'
+    },
+].map((item) => ({
+    ...item,
+    id: nanoid(),
+}));
 
 export function CardList() {
-    const cards = [
-        {
-            name: 'Кошечки',
-            style: 'Кошачий',
-            color: 'Розовый',
-            weather: '15C',
-            category: 'На выход',
-            note: 'Просто потому что я люблю кошечек',
-            img: 'https://vk.com/sticker/1-71361-128b'
-        },
-        {
-            name: 'Собачки',
-            style: 'Собачий',
-            color: 'Кремовый',
-            weather: '15C',
-            category: 'На выход',
-            note: 'Просто потому что я люблю собачек',
-            img: 'https://vk.com/sticker/1-68950-128b'
-        },
-        {
-            name: 'Крысятки',
-            style: 'Крысиный',
-            color: 'Белый',
-            weather: '20C',
-            category: 'Дома',
-            note: 'Просто потому что я люблю крысок'
-        },
-    ].map((item) => ({
-        ...item,
-        id: nanoid(),
-    }));
+    const [cardsState, setCardsState] = useState(cards)
 
-    return <ul>{cards != null ? cards.map((card, index) => {
+    const handleDelete = id => {
+        setCardsState(cardsState.filter(card => card.id !== id))
+    }
+
+
+    return  <>
+    <ul>{cardsState != null ? cardsState.map((card, index) => {
         return (<Card key={card.id}>
-            <button className={styles.deleteBtn}><DeleteButton width={'38'} height={'38'} /></button>
+            <button className={styles.deleteBtn} onClick={() => handleDelete(card.id)}><DeleteButton width={'38'} height={'38'} /></button>
             <CardInfo
             name={card.name}
             style={card.style}
@@ -51,5 +61,6 @@ export function CardList() {
             />
         </Card>)
     }): ''}</ul>
+    </>
 
 }
