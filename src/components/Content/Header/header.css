@@ -17,6 +17,10 @@
     height: 40px;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 100px;

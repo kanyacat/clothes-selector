@@ -5,7 +5,7 @@ import {Link, Route, Routes} from "react-router-dom";
 import {Clothes} from "../Clothes";
 import {AddClothes} from "../AddClothes";
 import {SelectClothes} from "../SelectClothes";
-import {Modal, ModalWindow} from "../../ModalWindow/ModalWindow";
+import {ModalWindow} from "../../ModalWindow/ModalWindow";
 import React from "react";
 
 
@@ -27,22 +27,24 @@ export function Header() {
                 <Link to="/selectClothes">
                     <HeaderComponent text={'ПОДБОР ОДЕЖДЫ'}/>
                 </Link>
-                <Link to='/login'>
+                <a className={styles.cursor}>
                     <HeaderComponent text={'login'} icon={<LoginArrow />} onClick={() => setModal(true)}/>
-                </Link>
-            </div>
-
-            <Routes>
-                <Route path="/" element={<Clothes />} />
-                <Route path="/addClothes" element={<AddClothes />} />
-                <Route path="/selectClothes" element={<SelectClothes />} />
-                <Route path="/login" element={<Modal
+                </a>
+                </div>
+            {isModal && (
+                <ModalWindow
                     visible={isModal}
                     title="Заголовок"
                     content={<p>Что-то важное</p>}
                     footer={<button onClick={onClose}>Закрыть</button>}
                     onClose={onClose}
-                />} />
+                />
+            )}
+
+            <Routes>
+                <Route path="*" element={<Clothes />} />
+                <Route path="/addClothes" element={<AddClothes />} />
+                <Route path="/selectClothes" element={<SelectClothes />} />
             </Routes>
         </div>
     </header>)

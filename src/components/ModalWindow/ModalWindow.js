@@ -1,13 +1,18 @@
 import styles from './modalWindow.css';
 import React from "react";
+import ReactDOM from "react-dom";
 
-export const Modal = ({
+
+export const ModalWindow = ({
                    visible = false,
                    title = '',
                    content = '',
                    footer = '',
                    onClose,
                }) => {
+
+    const node = document.querySelector("#modal_root");
+    if (!node) return null;
 
     // создаем обработчик нажатия клавиши Esc
     const onKeydown = ({key}) => {
@@ -23,12 +28,11 @@ export const Modal = ({
         return () => document.removeEventListener('keydown', onKeydown)
     })
 
-
     // если компонент невидим, то не отображаем его
     if (!visible) return null;
 
     // или возвращаем верстку модального окна
-    return <div className={styles.modal} onClick={onClose}>
+    return ReactDOM.createPortal(<div className={styles.modal} onClick={onClose}>
         <div className={styles.modalDialog} onClick={e => e.stopPropagation()}>
             <div className={styles.modalHeader}>
                 <h3 className={styles.modalTitle}>{title}</h3>
@@ -41,23 +45,7 @@ export const Modal = ({
             </div>
             {footer && <div className={styles.modalFooter}>{footer}</div>}
         </div>
-    </div>
+    </div>, node)
 }
 
-export const ModalWindow = () => {
-    const [isModal, setModal] = React.useState(false)
-    const onClose = () => setModal(false)
-    return (
-        <React.Fragment>
-            <button onClick={() => setModal(true)}>Клик-клик-клик</button>
-            <Modal
-                visible={isModal}
-                title="Заголовок"
-                content={<p>Что-то важное</p>}
-                footer={<button onClick={onClose}>Закрыть</button>}
-                onClose={onClose}
-            />
-         </React.Fragment>
-    );
-};
 

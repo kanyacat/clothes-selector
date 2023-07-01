@@ -23,6 +23,8 @@
     background-color: #FEFEFE;
     height: 1px;
     width: 100%;
+
+    cursor: pointer;
 }
 
 .headerLink:hover:after,
