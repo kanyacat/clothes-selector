@@ -71,3 +71,13 @@ export const selectSchema = yup.object().shape({
         .integer()
         .required("Обязательно"),
 });
+
+export const loginSchema = yup.object().shape({
+    login: yup
+        .string()
+        .required("Обязательно"),
+    password: yup
+        .string()
+        .required("Обязательно"),
+
+});

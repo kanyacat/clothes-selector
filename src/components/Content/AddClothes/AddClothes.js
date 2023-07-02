@@ -56,7 +56,7 @@ export function AddClothes() {
 
                                 <CustomInput label='ПРИМЕЧАНИЕ' name='note' type='text' placeholder='Введите примечание' />
 
-                                <button type='submit' disabled={isSubmitting} className={styles.btn}>submit</button>
+                                <button type='submit' disabled={isSubmitting} className={styles.btn}>Добавить</button>
                                 </div>
                             </Form>
                         )}
