@@ -2,6 +2,7 @@ import {Form, Formik} from "formik";
 import {loginSchema} from "../../schemas";
 import styles from "../../Content/AddClothes/addClothes.css";
 import {CustomInput} from "../../Content/CustomInput";
+import {DeleteButton} from "../../Content/Card/CardElements/DeleteButton";
 
 export function LoginForm() {
     const onSubmit = async (values, actions) => {
@@ -11,7 +12,6 @@ export function LoginForm() {
             setTimeout(resolve, 1000))
         actions.resetForm();
     }
-
 
     return <>
     <Formik initialValues={{ login: '', password:'',}}

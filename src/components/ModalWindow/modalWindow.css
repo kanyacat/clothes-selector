@@ -36,10 +36,9 @@
 .modalFooter {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 5px 5px;
 }
 .modalHeader {
-    border-bottom: 1px solid #dbdbdb;
     justify-content: space-between;
 }
 .modalFooter {

@@ -2,6 +2,7 @@ import styles from './modalWindow.css';
 import React from "react";
 import ReactDOM from "react-dom";
 import {LoginForm} from "./LoginForm/LoginForm";
+import {DeleteButton} from "../Content/Card/CardElements/DeleteButton";
 
 
 export const ModalWindow = ({
@@ -37,7 +38,7 @@ export const ModalWindow = ({
         <div className={styles.modalDialog} onClick={e => e.stopPropagation()}>
             <div className={styles.modalHeader}>
                 <span className={styles.modalClose} onClick={onClose}>
-            &times;
+            <DeleteButton width={'28'} height={'28'} />
           </span>
             </div>
             <div className={styles.modalBody}>

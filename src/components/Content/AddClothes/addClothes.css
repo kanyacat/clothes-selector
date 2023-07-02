@@ -31,6 +31,7 @@ select {
 
     padding: 6px 8px;
 
+    background-color: white;
     font-size: 16px;
     letter-spacing: 2px;
     border: 1px solid #CABCB1;
@@ -57,6 +58,10 @@ select::placeholder {
     padding: 10px;
     background-color: #CABCB1;
     border-radius: 10px;
+
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
 }
 
 .btn:disabled {
