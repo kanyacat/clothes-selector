@@ -1,26 +1,30 @@
-.title {
-    position: relative;
+.container {
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     font-size: 22px;
     font-weight: 300;
     line-height: 120%;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
+
+}
+
+.title {
+    position: relative;
     text-transform: uppercase;
 }
 
 .value {
     text-transform: none;
-    letter-spacing: 2px;
-    line-height: 100%;
 }
 
-/*.title:after {*/
-/*    position: absolute;*/
+.title:after {
+    position: absolute;
 
-/*    content: '';*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    background-color: #474246;*/
-/*    height: 1px;*/
-/*    width: 100%;*/
-/*}*/
+    content: '';
+    bottom: 0;
+    left: 0;
+    background-color: #474246;
+    height: 1px;
+    width: 100%;
+}

@@ -9,28 +9,25 @@ import {useState} from 'react';
 const cards = [
     {
         name: 'Кошечки',
-        style: 'Кошачий',
-        color: 'Розовый',
-        weather: '15C',
-        category: 'На выход',
+        style: 'Собеседование',
+        color: 'Тёмная одежда',
+        weather: '15°C',
         note: 'Просто потому что я люблю кошечек',
         img: 'https://vk.com/sticker/1-71361-128b'
     },
     {
         name: 'Собачки',
-        style: 'Собачий',
-        color: 'Кремовый',
-        weather: '15C',
-        category: 'На выход',
+        style: 'На прогулку',
+        color: 'Светлая одежда',
+        weather: '20°C',
         note: 'Просто потому что я люблю собачек',
         img: 'https://vk.com/sticker/1-68950-128b'
     },
     {
         name: 'Крысятки',
         style: 'Крысиный',
-        color: 'Белый',
-        weather: '20C',
-        category: 'Дома',
+        color: 'Светлая одежда',
+        weather: '15°C',
         note: 'Просто потому что я люблю крысок'
     },
 ].map((item) => ({
@@ -55,7 +52,6 @@ export function CardList() {
             style={card.style}
             color={card.color}
             weather={card.weather}
-            category={card.category}
             note={card.note}
             img={card.img}
             />

@@ -12,7 +12,12 @@
 
 .img {
     text-align: center;
-    padding: 20px;
+    max-width: 220px;
+    max-height: 220px;
+}
+
+.imgInput {
+    margin-top: 10px;
 }
 
 .content {

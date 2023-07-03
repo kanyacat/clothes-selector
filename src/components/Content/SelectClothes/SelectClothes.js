@@ -39,7 +39,7 @@ export function SelectClothes() {
                         <CustomSelect name='color'>
                             <option value="">ЦВЕТОВАЯ ГАММА</option>
                             <option value='dark'>Тёмная одежда</option>
-                            <option value='light'>Светлая одежды</option>
+                            <option value='light'>Светлая одежда</option>
                         </CustomSelect>
 
                         <CustomInput label='ПОГОДА' name='weather' type='number' placeholder='Введите погоду' />

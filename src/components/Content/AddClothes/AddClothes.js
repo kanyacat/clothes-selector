@@ -6,15 +6,20 @@ import {Form, Formik} from "formik";
 import {cardSchema} from "../../schemas";
 import {CustomInput} from "../CustomInput";
 import {CustomSelect} from "../CustomSelect";
+import {useState} from "react";
 
 export function AddClothes() {
 
+    const [image, setImage] = useState('https://svgshare.com/i/ucc.svg');
+
+    console.log(image)
     const onSubmit = async (values, actions) => {
         console.log(values)
 
         await new Promise((resolve) =>
             setTimeout(resolve, 1000))
         actions.resetForm();
+        setImage('https://svgshare.com/i/ucc.svg')
     }
 
     return (<>
@@ -29,9 +34,16 @@ export function AddClothes() {
                         {({isSubmitting, setFieldValue, errors, touched}) => (
                             <Form className={styles.container}>
                                 <div className={styles.imgContainer}>
-                                <CardImg/>
-                                <input id="file" name="file" type="file" onChange={(event) => {
-                                    setFieldValue("file", event.currentTarget.files[0])}} />
+                                    {image && <img className={styles.img} src={image} alt="preview image" />}
+                                    <input className={styles.imgInput} id="file" name="file" type="file"
+                                       onChange={(event) => {
+                                           if (event.target.files && event.target.files[0]) {
+                                               setImage(URL.createObjectURL(event.target.files[0]))
+                                               setFieldValue("file", event.currentTarget.files[0])
+                                           }
+                                       }
+                                }
+                                />
                                     {errors.file && touched.file && <p className={styles.error}>{errors.file}</p>}
                                 </div>
                                 <div className={styles.content}>
@@ -49,7 +61,7 @@ export function AddClothes() {
                                 <CustomSelect name='color'>
                                     <option value="">ЦВЕТОВАЯ ГАММА</option>
                                     <option value='dark'>Тёмная одежда</option>
-                                    <option value='light'>Светлая одежды</option>
+                                    <option value='light'>Светлая одежда</option>
                                 </CustomSelect>
 
                                 <CustomInput label='ПОГОДА' name='weather' type='number' placeholder='Введите погоду' />

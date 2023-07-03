@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {LoginForm} from "./LoginForm/LoginForm";
 import {DeleteButton} from "../Content/Card/CardElements/DeleteButton";
+import {Title} from "../Content/Title/Title";
 
 
 export const ModalWindow = ({
@@ -37,6 +38,7 @@ export const ModalWindow = ({
     return ReactDOM.createPortal(<div className={styles.modal} onClick={onClose}>
         <div className={styles.modalDialog} onClick={e => e.stopPropagation()}>
             <div className={styles.modalHeader}>
+                <span className={styles.modalTitle}><Title value='Вход | Регистрация'/></span>
                 <span className={styles.modalClose} onClick={onClose}>
             <DeleteButton width={'28'} height={'28'} />
           </span>
