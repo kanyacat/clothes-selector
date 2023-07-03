@@ -17,20 +17,6 @@ export const basicSchema = yup.object().shape({
         .required("required"),
 })
 
-export const advancedSchema = yup.object().shape({
-    username: yup
-        .string()
-        .min(3, "Username must be at least 3 characters long")
-        .required("Required"),
-    jobType: yup
-        .string()
-        .oneOf(["designer", "developer", "manager", "other"], "Invalid Job Type")
-        .required("Required"),
-    acceptedTos: yup
-        .boolean()
-        .oneOf([true], "Please accept the terms of service"),
-});
-
 export const cardSchema = yup.object().shape({
     file: yup
         .string()
@@ -52,8 +38,6 @@ export const cardSchema = yup.object().shape({
         .number()
         .integer()
         .required("Обязательно"),
-    note: yup
-        .string()
 });
 
 export const selectSchema = yup.object().shape({
@@ -79,5 +63,4 @@ export const loginSchema = yup.object().shape({
     password: yup
         .string()
         .required("Обязательно"),
-
 });

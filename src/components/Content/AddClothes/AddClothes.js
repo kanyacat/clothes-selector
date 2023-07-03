@@ -27,7 +27,7 @@ export function AddClothes() {
             <ul>
                 <Card>
                     <Formik initialValues={{file: '', name: '', style:'',
-                        color: '', weather: '', note: ''
+                        color: '', weather: ''
                         }}
                             validationSchema={cardSchema}
                             onSubmit={onSubmit}>
@@ -65,8 +65,6 @@ export function AddClothes() {
                                 </CustomSelect>
 
                                 <CustomInput label='ПОГОДА' name='weather' type='number' placeholder='Введите погоду' />
-
-                                <CustomInput label='ПРИМЕЧАНИЕ' name='note' type='text' placeholder='Введите примечание' />
 
                                 <button type='submit' disabled={isSubmitting} className={styles.btn}>Добавить</button>
                                 </div>

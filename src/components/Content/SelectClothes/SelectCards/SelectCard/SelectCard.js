@@ -8,6 +8,5 @@ export function SelectCard(props) {
             <img src={img} className={styles.img}/>
             <h1 className={styles.name}>{name}</h1>
             <h1 className={styles.style}>{style}</h1>
-            <textarea placeholder='Примечание' value={note} name="note" id="note" className={styles.note} readOnly></textarea>
     </li>
 }
