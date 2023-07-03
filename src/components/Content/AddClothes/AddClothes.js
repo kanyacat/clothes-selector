@@ -35,7 +35,7 @@ export function AddClothes() {
                             <Form className={styles.container}>
                                 <div className={styles.imgContainer}>
                                     {image && <img className={styles.img} src={image} alt="preview image" />}
-                                    <input className={styles.imgInput} id="file" name="file" type="file"
+                                    <input className={styles.imgInput} id="file" name="file" type="file" accept='image/*'
                                        onChange={(event) => {
                                            if (event.target.files && event.target.files[0]) {
                                                setImage(URL.createObjectURL(event.target.files[0]))
