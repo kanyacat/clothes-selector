@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {LoginForm} from "./LoginForm/LoginForm";
 import {DeleteButton} from "../Content/Card/CardElements/DeleteButton";
-import {Title} from "../Content/Title/Title";
+import {RegForm} from "./RegForm/RegForm";
 
 
 export const ModalWindow = ({
@@ -31,6 +31,8 @@ export const ModalWindow = ({
         return () => document.removeEventListener('keydown', onKeydown)
     })
 
+    const [logIn, setLogIn] = React.useState(true);
+
     // если компонент невидим, то не отображаем его
     if (!visible) return null;
 
@@ -38,13 +40,18 @@ export const ModalWindow = ({
     return ReactDOM.createPortal(<div className={styles.modal} onClick={onClose}>
         <div className={styles.modalDialog} onClick={e => e.stopPropagation()}>
             <div className={styles.modalHeader}>
-                <span className={styles.modalTitle}><Title value='Вход | Регистрация'/></span>
+                <span className={styles.modalTitle}>
+                    <a className={styles.link} onClick={() => setLogIn(true)}>Вход</a>
+                    <span className={styles.line}>|</span>
+                    <a  className={styles.link} onClick={() => setLogIn(false)}>Регистрация</a>
+                </span>
                 <span className={styles.modalClose} onClick={onClose}>
             <DeleteButton width={'28'} height={'28'} />
           </span>
             </div>
             <div className={styles.modalBody}>
-                <div className={styles.modalContent}><LoginForm /></div>
+                {logIn && (<div className={styles.modalContent}><LoginForm /></div>)}
+                {!logIn && (<div className={styles.modalContent}><RegForm /></div>)}
             </div>
         </div>
     </div>, node)

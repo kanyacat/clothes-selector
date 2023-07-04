@@ -39,15 +39,18 @@
     padding: 5px 5px;
 }
 .modalHeader {
+    margin-top: 10px;
     justify-content: space-between;
 }
+
+
 .modalFooter {
     border-top: 1px solid #dbdbdb;
     justify-content: flex-end;
 }
 .modalClose {
     cursor: pointer;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: -1rem -1rem -1rem auto;
 }
 .modalBody {
@@ -59,7 +62,24 @@
 
 .modalTitle {
     margin-left: 28px;
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
 }
+
+.line {
+    margin: 0 2px;
+}
+
+.link {
+    position: relative;
+    cursor: pointer;
+}
+
 
 @keyframes appear {
     from {
@@ -77,3 +97,28 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 530px) {
+    .modalTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 497px) {
+    .modalTitle {
+        line-height: 120%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line {
+        display: none;
+    }
+}
+
+@media (max-width: 370px) {
+    .modalTitle {
+        font-size: 20px;
+    }
+}
+
