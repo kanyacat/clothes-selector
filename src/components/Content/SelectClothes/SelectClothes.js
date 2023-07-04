@@ -1,11 +1,11 @@
-import {Title} from "../Title/Title";
 import {Form, Formik} from "formik";
 import styles from './selectClothes.css'
 import {selectSchema} from "../../schemas";
-import {CustomInput} from "../CustomInput";
-import {CustomSelect} from "../CustomSelect";
 import {SelectCards} from "./SelectCards";
 import {SelectCard} from "./SelectCards/SelectCard";
+import {CustomSelect} from "../CustomComponents/CustomSelect";
+import {CustomInput} from "../CustomComponents/CustomInput";
+import {Title} from "../CustomComponents/Title/Title";
 export function SelectClothes() {
 
     const onSubmit = async (values, actions) => {

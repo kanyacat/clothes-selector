@@ -1,12 +1,12 @@
-import {Title} from "../Title/Title";
 import styles from './addClothes.css'
 import {CardImg} from "./CardImg";
 import {Card} from "../Card";
 import {Form, Formik} from "formik";
 import {cardSchema} from "../../schemas";
-import {CustomInput} from "../CustomInput";
-import {CustomSelect} from "../CustomSelect";
 import {useState} from "react";
+import {CustomSelect} from "../CustomComponents/CustomSelect";
+import {CustomInput} from "../CustomComponents/CustomInput";
+import {Title} from "../CustomComponents/Title/Title";
 
 export function AddClothes() {
 

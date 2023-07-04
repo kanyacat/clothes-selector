@@ -1,9 +1,9 @@
 import styles from './clothes.css'
-import {Title} from "../Title/Title";
 import {AddClothesButton} from "./AddClothesButton";
 import {CardList} from "../CardList";
 import {Link, Route, Routes} from "react-router-dom";
 import {AddClothes} from "../AddClothes";
+import {Title} from "../CustomComponents/Title/Title";
 
 
 export function Clothes() {
