@@ -28,6 +28,8 @@ a {
 }
 
 button {
+    font-family: Roboto;
+
     padding: 0;
     border: 0;
     background: transparent;

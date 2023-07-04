@@ -7,6 +7,7 @@ import {AddClothes} from "../AddClothes";
 import {SelectClothes} from "../SelectClothes";
 import {ModalWindow} from "../../ModalWindow/ModalWindow";
 import React from "react";
+import {MainPage} from "../MainPage";
 
 
 
@@ -18,17 +19,20 @@ export function Header() {
     return(<header className={styles.header}>
         <div className={styles.container}>
             <div className={styles.header__content}>
+                <Link to="/main">
+                    <HeaderComponent text={'ГЛАВНАЯ'}/>
+                </Link>
                 <Link to="/">
                     <HeaderComponent text={'МОЙ ГАРДЕРОБ'}/>
                 </Link>
                 <Link to="/addClothes">
-                    <HeaderComponent text={'ДОБАВИТЬ НУЖНУЮ ВЕЩЬ'}/>
+                    <HeaderComponent text={'ДОБАВИТЬ ВЕЩЬ'}/>
                 </Link>
                 <Link to="/selectClothes">
                     <HeaderComponent text={'ПОДБОР ОДЕЖДЫ'}/>
                 </Link>
                 <a className={styles.cursor}>
-                    <HeaderComponent text={'login'} icon={<LoginArrow />} onClick={() => setModal(true)}/>
+                    <HeaderComponent text={'ВХОД'} icon={<LoginArrow />} onClick={() => setModal(true)}/>
                 </a>
                 </div>
             {isModal && (
@@ -42,6 +46,7 @@ export function Header() {
             )}
 
             <Routes>
+                <Route path='/main' element={<MainPage />} />
                 <Route path="*" element={<Clothes />} />
                 <Route path="/addClothes" element={<AddClothes />} />
                 <Route path="/selectClothes" element={<SelectClothes />} />

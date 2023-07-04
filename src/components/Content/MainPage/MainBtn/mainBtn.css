@@ -1,0 +1,29 @@
+.btn {
+    text-align: center;
+
+    margin: 0 15px;
+
+    padding: 14px 30px;
+
+    color: #FFF;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+
+    background-color: #A5B9B8;
+    border-radius: 13px;
+}
+
+@media (max-width: 650px) {
+    .btn {
+        font-size: 16px;
+        /*margin: 10px auto;*/
+    }
+}
+
+@media (max-width: 450px) {
+    .btn {
+        margin: 10px auto;
+    }
+}
