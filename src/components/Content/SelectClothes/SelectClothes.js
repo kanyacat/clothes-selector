@@ -49,7 +49,7 @@ export function SelectClothes() {
                 </Form>
             )}
         </Formik>
-        <h2 className={styles.selectTitle}>Возможно вам подойдут: </h2>
+        <h2 className={styles.selectTitle}>Возможно, вам подойдут: </h2>
         <SelectCards>
             <SelectCard name={'Крутой наряд'} style={'Деловая встреча'} note={'Наряд года'} />
             <SelectCard name={'Обычный наряд'} style={'Прогулка'} note={'Наряд дня'} />
