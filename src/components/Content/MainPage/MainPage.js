@@ -8,6 +8,5 @@ export function MainPage() {
         <Main />
         <AboutUs />
         <footer className={styles.footer} />
-
     </>
 }

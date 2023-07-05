@@ -8,27 +8,24 @@ import {useState} from 'react';
 
 const cards = [
     {
-        name: 'Кошечки',
+        name: 'Белый жакет',
         style: 'Собеседование',
+        color: 'Светлая одежда',
+        weather: '15°C',
+        img: 'https://cdn.laredoute.com/products/8/7/b/87bb9f9d3a5e80e00b6684faa43f750b.jpg?imgopt=twic&twic=v1/cover=1200x1200'
+    },
+    {
+        name: 'Мои любимые облака',
+        style: 'Прогулка',
+        color: 'Светлая одежда',
+        weather: '10°C',
+        img: 'https://i.pinimg.com/originals/d3/5d/45/d35d457b99b3dd61d3e72e304ed518b7.jpg'
+    },
+    {
+        name: 'Моё название',
+        style: 'Свидание',
         color: 'Тёмная одежда',
-        weather: '15°C',
-        note: 'Просто потому что я люблю кошечек',
-        img: 'https://vk.com/sticker/1-71361-128b'
-    },
-    {
-        name: 'Собачки',
-        style: 'На прогулку',
-        color: 'Светлая одежда',
         weather: '20°C',
-        note: 'Просто потому что я люблю собачек',
-        img: 'https://vk.com/sticker/1-68950-128b'
-    },
-    {
-        name: 'Крысятки',
-        style: 'Крысиный',
-        color: 'Светлая одежда',
-        weather: '15°C',
-        note: 'Просто потому что я люблю крысок'
     },
 ].map((item) => ({
     ...item,

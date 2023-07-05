@@ -4,7 +4,7 @@ import {CardValue} from "./CardValue";
 export function CardInfo(props) {
     const {name, style, color, weather, note, img = 'https://svgshare.com/i/ucc.svg'} = props;
 
-    return (<div className={styles.container}> <div className={styles.img}><img src={img}/></div>
+    return (<div className={styles.container}> <div className={styles.imgContainer}><img className={styles.img} src={img}/></div>
         <div className={styles.content}>
             <CardValue title={'Название'} value={name}/>
             <CardValue title={'Стиль'} value={style}/>

@@ -5,11 +5,15 @@
     align-items: center;
 }
 
-.img {
-    min-width: 30%;
-    height: auto;
-    text-align: center;
+.imgContainer {
     padding: 20px;
+}
+
+.img {
+    max-width: 220px;
+    max-height: 220px;
+
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
