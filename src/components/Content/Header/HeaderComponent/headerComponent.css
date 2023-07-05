@@ -25,6 +25,7 @@
     width: 100%;
 
     cursor: pointer;
+
 }
 
 .headerLink:hover:after,
@@ -53,6 +54,7 @@
 }
 
 @media (max-width: 400px) {
+
     .icon {
         display: none;
     }

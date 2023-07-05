@@ -21,6 +21,10 @@
     cursor: pointer;
 }
 
+.dressIcon {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 100px;
@@ -36,5 +40,13 @@
 @media (max-width: 600px) {
     .container {
         padding: 0 10px;
+    }
+
+    .mainLink {
+        display: none;
+    }
+
+    .dressIcon {
+        display: block;
     }
 }

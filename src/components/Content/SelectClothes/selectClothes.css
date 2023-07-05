@@ -13,11 +13,18 @@
     color: #ffff;
     background-color: #CABCB1;
     border-radius: 10px;
+
+    transition: background-color 0.1s linear;
 }
 
 .btn:disabled {
     opacity: 0.65;
 }
+
+.btn:hover {
+    background-color: #c2b3a9;
+}
+
 
 .selectTitle {
     font-size: 24px;

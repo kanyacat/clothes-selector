@@ -1,9 +1,13 @@
+.main {
+    margin-bottom: 40px;
+}
+
 .btn {
     text-align: center;
 
     margin: 0 15px;
 
-    padding: 14px 30px;
+    padding: 14px 60px;
 
     color: #FFF;
     font-size: 24px;
@@ -13,12 +17,17 @@
 
     background-color: #A5B9B8;
     border-radius: 13px;
+
+    transition: background-color 0.1s linear;
+}
+
+.btn:hover {
+    background-color: #aec9c5;
 }
 
 @media (max-width: 650px) {
     .btn {
         font-size: 16px;
-        /*margin: 10px auto;*/
     }
 }
 

@@ -8,9 +8,6 @@ import {RegForm} from "./RegForm/RegForm";
 
 export const ModalWindow = ({
                    visible = false,
-                   title = '',
-                   content = '',
-                   footer = '',
                    onClose,
                }) => {
 

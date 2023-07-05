@@ -67,10 +67,16 @@ select::placeholder {
     letter-spacing: 2px;
     color: white;
     text-transform: uppercase;
+
+    transition: background-color 0.1s linear;
 }
 
 .btn:disabled {
     opacity: 0.35;
+}
+
+.btn:hover {
+    background-color: #c2b3a9;
 }
 
 .inputError {

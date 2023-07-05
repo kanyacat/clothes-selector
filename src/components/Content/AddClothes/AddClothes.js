@@ -12,7 +12,6 @@ export function AddClothes() {
 
     const [image, setImage] = useState('https://svgshare.com/i/ucc.svg');
 
-    console.log(image)
     const onSubmit = async (values, actions) => {
         console.log(values)
 

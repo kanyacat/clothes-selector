@@ -1,0 +1,48 @@
+.content {
+    background: url('/src/img/aboutUsBackground.png') transparent center no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgContainer {
+    background: url('/src/img/aboutUs.jpg') transparent center no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    width: 100%;
+}
+
+.idea {
+    margin: 0 24px;
+
+    text-align: right;
+    font-size: 18px;
+
+    line-height: 115%;
+    letter-spacing: 1px;
+}
+
+.title {
+    color: #F8F8F8;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.text {
+    color: #F8F8F8;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .idea {
+        text-align: center;
+    }
+
+    .imgContainer {
+        display: none;
+    }
+}

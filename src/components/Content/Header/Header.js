@@ -1,6 +1,6 @@
 import styles from './header.css';
 import {HeaderComponent} from "./HeaderComponent";
-import {LoginArrow} from "../../../icons";
+import {DressIcon, LoginArrow} from "../../../icons";
 import {Link, Route, Routes} from "react-router-dom";
 import {Clothes} from "../Clothes";
 import {AddClothes} from "../AddClothes";
@@ -13,16 +13,20 @@ import {MainPage} from "../MainPage";
 
 export function Header() {
     const [isModal, setModal] = React.useState(false)
+
     const onClose = () => setModal(false)
 
 
     return(<header className={styles.header}>
         <div className={styles.container}>
             <div className={styles.header__content}>
-                <Link to="/main">
+                <Link to="/" className={styles.dressIcon}>
+                    <DressIcon />
+                </Link>
+                <Link to="/" className={styles.mainLink}>
                     <HeaderComponent text={'ГЛАВНАЯ'}/>
                 </Link>
-                <Link to="/">
+                <Link to="/clothes">
                     <HeaderComponent text={'МОЙ ГАРДЕРОБ'}/>
                 </Link>
                 <Link to="/addClothes">
@@ -46,10 +50,10 @@ export function Header() {
             )}
 
             <Routes>
-                <Route path='/main' element={<MainPage />} />
-                <Route path="*" element={<Clothes />} />
-                <Route path="/addClothes" element={<AddClothes />} />
-                <Route path="/selectClothes" element={<SelectClothes />} />
+                <Route path='*' element={<MainPage />} />
+                <Route path="/clothes/*" element={<Clothes />} />
+                <Route path="/addClothes/*" element={<AddClothes />} />
+                <Route path="/selectClothes/*" element={<SelectClothes />} />
             </Routes>
         </div>
     </header>)

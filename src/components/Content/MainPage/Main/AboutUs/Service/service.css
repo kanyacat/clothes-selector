@@ -1,0 +1,48 @@
+.content {
+    background: url('/src/img/clothesBack.jpg') transparent center no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgContainer {
+    background: url('/src/img/clothes.jpg') transparent center no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    width: 100%;
+}
+
+.service {
+    margin: 0 34px 0 24px;
+
+    text-align: left;
+    font-size: 18px;
+
+    line-height: 115%;
+    letter-spacing: 1px;
+}
+
+.title {
+    color: #474246;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.text {
+    color: #474246;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .service {
+        text-align: center;
+    }
+
+    .imgContainer {
+        display: none;
+    }
+}

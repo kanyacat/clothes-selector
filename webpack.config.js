@@ -28,7 +28,7 @@ module.exports = {
             {
                 test: GLOBAL_CSS_REGEXP,
                 use: ["style-loader", "css-loader"],
-            },,
+            },
             { test:  /\.js$|jsx/, use: 'babel-loader' }
         ]
     },
