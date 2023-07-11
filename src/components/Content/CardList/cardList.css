@@ -1,13 +1,10 @@
-.container {
-    position: relative;
-    height: 280px;
-    width: 100%;
-
-    background: #E7E0D0;
-    border-radius: 27px;
+.btnContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
 
     margin-bottom: 10px;
-
 }
 
 .deleteBtn {

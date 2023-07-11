@@ -4,6 +4,7 @@ import {DeleteButton} from "../Card/CardElements/DeleteButton";
 import { nanoid } from "nanoid/non-secure";
 import {Card} from "../Card";
 import {useState} from 'react';
+import {SortBtn} from "../SortBtn";
 
 
 const cards = [
@@ -32,16 +33,29 @@ const cards = [
     id: nanoid(),
 }));
 
+
 export function CardList() {
     const [cardsState, setCardsState] = useState(cards)
 
-    const handleDelete = id => {
+    const sortClick = (category) => {
+        setCardsState([...cardsState].sort((prev, next) => {
+            if ( prev[category] < next[category] ) return -1;
+            if ( prev[category] < next[category] ) return 1;
+        })
+        )
+    }
+
+    const handleDelete = (id) => {
         setCardsState(cardsState.filter(card => card.id !== id))
     }
 
-
     return  <>
-    <ul>{cardsState != null ? cardsState.map((card, index) => {
+        <div className={styles.btnContainer}>
+            <SortBtn onClick={() => sortClick('weather')} text={'Погода'}/>
+            <SortBtn onClick={() => sortClick('style')} text={'Стиль'}/>
+            <SortBtn onClick={() => sortClick('color')} text={'Цветовая гамма'}/>
+        </div>
+        <ul>{cardsState != null ? cardsState.map((card, index) => {
         return (<Card key={card.id}>
             <button className={styles.deleteBtn} onClick={() => handleDelete(card.id)}><DeleteButton width={'38'} height={'38'} /></button>
             <CardInfo
@@ -53,6 +67,7 @@ export function CardList() {
             img={card.img}
             />
         </Card>)
+
     }): ''}</ul>
     </>
 
