@@ -33,15 +33,18 @@ const cards = [
     id: nanoid(),
 }));
 
+let direction = false;
 
 export function CardList() {
     const [cardsState, setCardsState] = useState(cards)
 
     const sortClick = (category) => {
+        direction = !direction;
         setCardsState([...cardsState].sort((prev, next) => {
-            if ( prev[category] < next[category] ) return -1;
-            if ( prev[category] < next[category] ) return 1;
-        })
+            return direction
+                ? next[category].localeCompare(prev[category])
+                : prev[category].localeCompare(next[category]);
+            })
         )
     }
 

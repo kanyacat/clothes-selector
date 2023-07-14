@@ -1,6 +1,10 @@
 .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+
     margin: 5px;
-    padding: 5px 30px;
+    padding: 5px 30px 5px 20px;
 
     background-color: #CABCB1;
     border-radius: 6px;
@@ -9,4 +13,10 @@
     text-transform: uppercase;
     font-weight: 300;
     font-size: 15px;
+}
+
+.icon {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
 }
