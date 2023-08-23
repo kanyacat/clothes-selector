@@ -1,5 +1,4 @@
 import styles from './addClothes.css'
-import {CardImg} from "./CardImg";
 import {Card} from "../Card";
 import {Form, Formik} from "formik";
 import {cardSchema} from "../../schemas";
@@ -7,16 +6,20 @@ import {useState} from "react";
 import {CustomSelect} from "../CustomComponents/CustomSelect";
 import {CustomInput} from "../CustomComponents/CustomInput";
 import {Title} from "../CustomComponents/Title/Title";
+import {useDispatch} from "react-redux";
+import {addItems} from "../../../redux/clothes/slice";
 
 export function AddClothes() {
+    const dispatch = useDispatch()
 
     const [image, setImage] = useState('https://svgshare.com/i/ucc.svg');
 
     const onSubmit = async (values, actions) => {
-        console.log(values)
+        dispatch(addItems(values))
 
         await new Promise((resolve) =>
             setTimeout(resolve, 1000))
+        
         actions.resetForm();
         setImage('https://svgshare.com/i/ucc.svg')
     }
@@ -25,7 +28,7 @@ export function AddClothes() {
             <Title value={'добавление вещи в гардероб'}/>
             <ul>
                 <Card>
-                    <Formik initialValues={{file: '', name: '', style:'',
+                    <Formik initialValues={{img: '', name: '', style:'',
                         color: '', weather: ''
                         }}
                             validationSchema={cardSchema}
@@ -34,16 +37,16 @@ export function AddClothes() {
                             <Form className={styles.container}>
                                 <div className={styles.imgContainer}>
                                     {image && <img className={styles.img} src={image} alt="preview image" />}
-                                    <input className={styles.imgInput} id="file" name="file" type="file" accept='image/*'
-                                       onChange={(event) => {
-                                           if (event.target.files && event.target.files[0]) {
-                                               setImage(URL.createObjectURL(event.target.files[0]))
-                                               setFieldValue("file", event.currentTarget.files[0])
+                                    <input className={styles.imgInput} id="img" name="img" type="file" accept='image/*'
+                                           onChange={(event) => {
+                                               if (event.target.files && event.target.files[0]) {
+                                                   setImage(URL.createObjectURL(event.target.files[0]))
+                                                   setFieldValue("img", event.currentTarget.files[0].name)
+                                               }
                                            }
-                                       }
-                                }
-                                />
-                                    {errors.file && touched.file && <p className={styles.error}>{errors.file}</p>}
+                                           }
+                                    />
+                                    {errors.img && touched.img && <p className={styles.error}>{errors.img}</p>}
                                 </div>
                                 <div className={styles.content}>
 
