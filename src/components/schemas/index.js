@@ -13,12 +13,12 @@ export const cardSchema = yup.object().shape({
         .required("Обязательно"),
     style: yup
         .string()
-        .oneOf(["sobesedovanye", "delovay_Vstrecha", "progulka", "svidanie"],
+        .oneOf(["Собеседовние", "Деловая встреча", "Прогулка", "Свидание"],
             "Выберите один из вариантов")
         .required("Обязательно"),
     color: yup
         .string()
-        .oneOf(["dark", "light"], "Выберите один из вариантов")
+        .oneOf(["Тёмная одежда", "Светлая одежда"], "Выберите один из вариантов")
         .required("Обязательно"),
     weather: yup
         .number()
@@ -29,12 +29,12 @@ export const cardSchema = yup.object().shape({
 export const selectSchema = yup.object().shape({
     style: yup
         .string()
-        .oneOf(["sobesedovanye", "delovay_Vstrecha", "progulka", "svidanie"],
+        .oneOf(["Собеседовние", "Деловая встреча", "Прогулка", "Свидание"],
             "Выберите один из вариантов")
         .required("Обязательно"),
     color: yup
         .string()
-        .oneOf(["dark", "light"], "Выберите один из вариантов")
+        .oneOf(["Тёмная одежда", "Светлая одежда"], "Выберите один из вариантов")
         .required("Обязательно"),
     weather: yup
         .number()

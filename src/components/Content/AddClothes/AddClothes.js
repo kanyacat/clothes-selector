@@ -54,16 +54,16 @@ export function AddClothes() {
 
                                 <CustomSelect name='style'>
                                     <option value="">СТИЛЬ</option>
-                                    <option value='sobesedovanye'>Собеседование</option>
-                                    <option value='delovay_Vstrecha'>Деловая встреча</option>
-                                    <option value='progulka'>Прогулка</option>
-                                    <option value='svidanie'>Свидание</option>
+                                    <option value='Собеседовние'>Собеседование</option>
+                                    <option value='Деловая встреча'>Деловая встреча</option>
+                                    <option value='Прогулка'>Прогулка</option>
+                                    <option value='Свидание'>Свидание</option>
                                 </CustomSelect>
 
                                 <CustomSelect name='color'>
                                     <option value="">ЦВЕТОВАЯ ГАММА</option>
-                                    <option value='dark'>Тёмная одежда</option>
-                                    <option value='light'>Светлая одежда</option>
+                                    <option value='Тёмная одежда'>Тёмная одежда</option>
+                                    <option value='Светлая одежда'>Светлая одежда</option>
                                 </CustomSelect>
 
                                 <CustomInput label='ПОГОДА' name='weather' type='number' placeholder='Введите погоду' />
