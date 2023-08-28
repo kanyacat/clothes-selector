@@ -47,6 +47,11 @@ export const clothesSlice = createSlice({
 					return item.id !== action.payload
 				})
 			}
+		},
+		pathItems(state, action) {
+			state.items.map(obj =>
+				obj.id === action.payload.id ? { ...action.payload } : obj
+			)
 		}
 	}
 })
